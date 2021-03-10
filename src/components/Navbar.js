@@ -2,7 +2,7 @@ import logo from "../images/logo.png";
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const routes = ["/SignUp", "/SignIn"];
+const routes = ["/SignUp", "/"];
 
 function Navbar() {
   const location = useLocation();
@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <div
       className={`mt-2  justify-between flex-row items-center ${
-        location.pathname === "/SignUp" ? "hidden" : "flex"
+        location.pathname === "/" ? "hidden" : "flex"
       }`}
     >
       <img className="ml-8" src={logo} alt="logo-codeskills" />

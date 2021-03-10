@@ -11,7 +11,7 @@ class Home extends React.Component {
       password: "",
     },
     error: false,
-    errorMessage: "",
+    errorMessage: "Usuario o contraseña invalidos",
   };
 
   handleSubmit = (e) => {
@@ -30,14 +30,31 @@ class Home extends React.Component {
 
   handleButton = () => {
     let url = Apiurl;
-    axios.post(url, this.state.form).then((response) => {
-      console.log(response);
-    });
+    axios
+      .post(url, this.state.form)
+      .then((response) => {
+        if (response.data.status === 200) {
+          console.log(response);
+          window.location = "/About";
+        } else {
+          this.setState({
+            error: true,
+            errorMessage: response.data.result.errorMessage,
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        this.setState({
+          error: true,
+          errorMessage: "Usuario o contraseña incorrectos",
+        });
+      });
   };
 
   render() {
     return (
-      <div className="min-h-screen bg-hero-pattern flex justify-start">
+      <div className="min-h-screen bg-hero-pattern bg-no-repeat flex justify-start">
         <div className="ml-52 max-w-md w-full mx-auto mt-20 p-6 ">
           <div className="font-semibold text-4xl mb-4 ml-20">Sign In Here</div>
           <form onSubmit={this.handleSubmit} action="" className="space-y-6">
@@ -85,8 +102,7 @@ class Home extends React.Component {
             </div>
           </form>
           {this.state.error === true && (
-            <div>
-              Error mensaje
+            <div className="text-white w-full py-2 px-4 border border-red-300 bg-red-500 rounded mt-1">
               {this.state.errorMessage}
             </div>
           )}

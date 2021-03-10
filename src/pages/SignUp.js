@@ -38,7 +38,7 @@ class SignUp extends React.Component {
   };
   render() {
     return (
-      <div className="min-h-screen bg-hero-pattern flex justify-start">
+      <div className="min-h-screen bg-hero-pattern bg-no-repeat flex justify-start">
         <div className="ml-52 max-w-md w-full mx-auto mt-20 p-6 ">
           <div className="font-semibold text-4xl mb-4 ml-20">Sign Up Here</div>
           <form onSubmit={this.handleSubmit} action="" className="space-y-6">
@@ -47,7 +47,7 @@ class SignUp extends React.Component {
                 htmlFor=""
                 className="text-sm font-bold text-gray-600 block"
               >
-                ana2809
+                Username
               </label>
               <input
                 type="text"
