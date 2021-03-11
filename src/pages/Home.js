@@ -56,7 +56,7 @@ class Home extends React.Component {
     return (
       <div className="min-h-screen bg-hero-pattern bg-no-repeat flex justify-start">
         <div className="ml-52 max-w-md w-full mx-auto mt-20 p-6 ">
-          <div className="font-semibold text-4xl mb-4 ml-20">Sign In Here</div>
+          <div className="font-semibold text-4xl mb-4 ml-32">Sign In</div>
           <form onSubmit={this.handleSubmit} action="" className="space-y-6">
             <div>
               <label
@@ -89,7 +89,7 @@ class Home extends React.Component {
               ></input>
             </div>
             <div className="font-medium text-sm text-blue-500">
-              <Link to="/SignUp">Forgot Pasword?</Link>
+              <Link to="/ForgotPass">Forgot Pasword?</Link>
             </div>
             <button
               className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded-md text-white text-sm"

@@ -1,15 +1,11 @@
 import React from "react";
-import logoSignIn from "../images/LogosingIn.png";
-import { Apiurl } from "../service/ApiRest";
+import { Apiurl } from "../service/ApiForgotPass";
 import axios from "axios";
+import logoSignIn from "../images/LogosingIn.png";
 
-class SignUp extends React.Component {
+class ForgotPass extends React.Component {
   state = {
     form: {
-      username: "",
-      password: "",
-      first_name: "",
-      last_name: "",
       email: "",
     },
     error: false,
@@ -49,8 +45,7 @@ class SignUp extends React.Component {
         console.log(error);
         this.setState({
           error: true,
-          errorMessage:
-            "Parece que hay un error en tu información, intentalo nuevamente",
+          errorMessage: "El email no ha sido registrado anteriormente",
         });
       });
   };
@@ -58,67 +53,11 @@ class SignUp extends React.Component {
     return (
       <div className="min-h-screen bg-hero-pattern bg-no-repeat flex justify-start">
         <div className="ml-52 max-w-md w-full mx-auto mt-20 p-6 ">
-          <div className="font-semibold text-4xl mb-4 ml-32">Sign Up </div>
+          <div className="font-semibold text-4xl mb-4 ml-28">
+            Reset your password
+          </div>
+          <br></br>
           <form onSubmit={this.handleSubmit} action="" className="space-y-6">
-            <div>
-              <label
-                htmlFor=""
-                className="text-sm font-bold text-gray-600 block"
-              >
-                Username
-              </label>
-              <input
-                type="text"
-                className="w-full p-2 border border-gray-300 rounded mt-1"
-                name="username"
-                placeholder="Username"
-                onChange={this.handleChange}
-              ></input>
-            </div>
-            <div>
-              <label
-                htmlFor=""
-                className="text-sm font-bold text-gray-600 block"
-              >
-                Password
-              </label>
-              <input
-                type="password"
-                className="w-full p-2 border border-gray-300 rounded mt-1"
-                name="password"
-                placeholder="******"
-                onChange={this.handleChange}
-              ></input>
-            </div>
-            <div>
-              <label
-                htmlFor=""
-                className="text-sm font-bold text-gray-600 block"
-              >
-                First Name
-              </label>
-              <input
-                type="text"
-                className="w-full p-2 border border-gray-300 rounded mt-1"
-                name="firstName"
-                placeholder="Ana"
-              ></input>
-            </div>
-            <div>
-              <label
-                htmlFor=""
-                className="text-sm font-bold text-gray-600 block"
-              >
-                Last Name
-              </label>
-              <input
-                type="text"
-                className="w-full p-2 border border-gray-300 rounded mt-1"
-                name="lastName"
-                placeholder="Perez"
-                onChange={this.handleChange}
-              ></input>
-            </div>
             <div>
               <label
                 htmlFor=""
@@ -156,4 +95,4 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+export default ForgotPass;
