@@ -1,8 +1,11 @@
 import "codemirror/lib/codemirror.css";
-import "codemirror/theme/material.css";
+import "codemirror/theme/xq-light.css";
 import "codemirror/mode/xml/xml";
 import "codemirror/mode/javascript/javascript";
 import "codemirror/mode/css/css";
+import "codemirror/addon/edit/closetag";
+import "codemirror/addon/edit/trailingspace";
+
 import { Controlled as ControlledEditor } from "react-codemirror2";
 
 export default function Editor(props) {
@@ -13,7 +16,7 @@ export default function Editor(props) {
   }
 
   return (
-    <div className="bg-gray-200">
+    <div className="">
       <div className="">{displayName}</div>
       <ControlledEditor
         onBeforeChange={handleChange}
@@ -23,8 +26,10 @@ export default function Editor(props) {
           lineWrapping: true,
           lint: true,
           mode: language,
-          theme: "material",
+          theme: "xq-light",
           lineNumbers: true,
+          autoCloseTags: true,
+          trailingspace: true,
         }}
       />
     </div>
