@@ -1,3 +1,5 @@
+/*Whit this code we can embed the text editor in a recat app.
+This text editor was made to bomberbot for a CodeSills Team */
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -24,3 +26,5 @@ function App() {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
+
+/* CodeSkills */
