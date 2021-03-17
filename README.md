@@ -4,20 +4,17 @@ Online code editor for HTML, CSS and JS with automatic preview function, here yo
 
 ## live demo :boom:
 
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/7LnMswlAfwg" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
+[![Bomberbot](http://img.youtube.com/vi/7LnMswlAfwg/0.jpg)](https://www.youtube.com/watch?app=desktop&v=7LnMswlAfwg "bomberbot")
+
 ## To know more about bomberbot :arrow_down:
 
 Click here to see the page :checkered_flag:
 
-[Web-site](https://bomberbot-project-frontend.vercel.app/"code-skills")
+[Web-site-login](https://bomberbot-project-frontend.vercel.app/"code-skills")
 
 Click here to see only the text editor :rocket:
 
-[Web-site](https://bomberbot-project-frontend.vercel.app/TextEditor/"code-skills")
+[text-editor](https://bomberbot-project-frontend.vercel.app/TextEditor/"code-skills")
 
 ## Embed code :wink:
 
