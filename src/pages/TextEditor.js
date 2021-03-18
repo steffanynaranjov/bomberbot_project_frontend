@@ -40,12 +40,12 @@ function TextEditor() {
 
   return (
     <>
-      <div className=" border border-gray-300 rounded mt-1 mx-4">
+      <div className="border border-gray-300 rounded mt-1 mx-4">
         <div className="h-20  text-right py-8 px-4 bg-bom-blue text-gray-500">
           GUARDADO
         </div>
         <div className="flex flex-row ">
-          <div className="w-1/5 boder border-gray-300 rounded mt-1 bg-bom-orange text-gray-500">
+          <div className="md:w-1/5 w-1/3 boder border-gray-300 rounded mt-1 bg-bom-orange text-gray-500">
             <button className="bg-bom-green shadow-md hover:bg-green-300 w-full py-2 px-4 mb-4">
               Guardar
             </button>
@@ -71,7 +71,7 @@ function TextEditor() {
               </TreeItem>
             </TreeView>
           </div>
-          <div className="w-2/5 border border-gray-300">
+          <div className="md:w-2/5 w-2/6 border border-gray-300">
             <div>
               <input
                 type="text"

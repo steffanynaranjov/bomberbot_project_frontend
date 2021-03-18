@@ -1,6 +1,7 @@
 import React from "react";
 import { Apiurl } from "../service/ApiForgotPass";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import logoSignIn from "../images/LogosingIn.png";
 
 class ForgotPass extends React.Component {
@@ -51,9 +52,16 @@ class ForgotPass extends React.Component {
   };
   render() {
     return (
-      <div className="min-h-screen bg-hero-pattern bg-no-repeat flex justify-start">
-        <div className="ml-52 max-w-md w-full mx-auto mt-20 p-6 ">
-          <div className="font-semibold text-4xl mb-4 ml-28">
+      <div className="min-h-screen bg-hero-pattern bg-no-repeat bg-cover md:flex md:justify-start">
+        <div className="">
+          <img
+            className="h-48 w-48 ml-20 md:h-72 md:w-72 lg:w-96 lg:h-96"
+            src={logoSignIn}
+            alt="logo-codeskills"
+          />
+        </div>
+        <div className="md:ml-52 max-w-md w-full mt-4 p-6 ">
+          <div className="font-semibold md:text-4xl text-3xl mb-4 md:ml-32">
             Reset your password
           </div>
           <br></br>
@@ -79,6 +87,9 @@ class ForgotPass extends React.Component {
             >
               Submit
             </button>
+            <div className="ml-4 font-medium text-sm text-blue-500">
+              <Link to="/">Do you remember your password? Sign in here</Link>
+            </div>
           </form>
           <br></br>
           {this.state.error === true && (
@@ -86,9 +97,6 @@ class ForgotPass extends React.Component {
               {this.state.errorMessage}
             </div>
           )}
-        </div>
-        <div className="">
-          <img className="mr-24" src={logoSignIn} alt="logo-codeskills" />
         </div>
       </div>
     );

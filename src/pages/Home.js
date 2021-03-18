@@ -11,7 +11,7 @@ class Home extends React.Component {
       password: "",
     },
     error: false,
-    errorMessage: "Usuario o contraseña invalidos",
+    errorMessage: "Invalid username or password",
   };
 
   handleSubmit = (e) => {
@@ -54,9 +54,18 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="min-h-screen bg-hero-pattern bg-no-repeat flex justify-start">
-        <div className="ml-52 max-w-md w-full mx-auto mt-20 p-6 ">
-          <div className="font-semibold text-4xl mb-4 ml-32">Sign In</div>
+      <div className="min-h-screen bg-hero-pattern bg-no-repeat bg-cover md:flex md:justify-start">
+        <div className="">
+          <img
+            className="h-48 w-48 ml-20 md:h-72 md:w-72 lg:w-96 lg:h-96"
+            src={logoSignIn}
+            alt="logo-codeskills"
+          />
+        </div>
+        <div className="md:ml-52 max-w-md w-full mt-4 p-6 ">
+          <div className="font-semibold md:text-4xl text-3xl mb-4 md:ml-32">
+            Sign In
+          </div>
           <form onSubmit={this.handleSubmit} action="" className="space-y-6">
             <div>
               <label
@@ -97,8 +106,8 @@ class Home extends React.Component {
             >
               Submit
             </button>
-            <div className="ml-10 font-medium text-sm text-blue-500">
-              <Link to="/SignUp">Doesn't have account yet? Sign Up here!</Link>
+            <div className="ml-4 font-medium text-sm text-blue-500">
+              <Link to="/SignUp">Dont't have account yet? Sign Up here!</Link>
             </div>
           </form>
           {this.state.error === true && (
@@ -106,9 +115,6 @@ class Home extends React.Component {
               {this.state.errorMessage}
             </div>
           )}
-        </div>
-        <div className="">
-          <img className="mr-24" src={logoSignIn} alt="logo-codeskills" />
         </div>
       </div>
     );

@@ -1,6 +1,7 @@
 import React from "react";
 import logoSignIn from "../images/LogosingIn.png";
 import { Apiurl } from "../service/ApiRest";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 class SignUp extends React.Component {
@@ -50,15 +51,24 @@ class SignUp extends React.Component {
         this.setState({
           error: true,
           errorMessage:
-            "Parece que hay un error en tu información, intentalo nuevamente",
+            "We found a mistake in your information, please try again",
         });
       });
   };
   render() {
     return (
-      <div className="min-h-screen bg-hero-pattern bg-no-repeat flex justify-start">
-        <div className="ml-52 max-w-md w-full mx-auto mt-20 p-6 ">
-          <div className="font-semibold text-4xl mb-4 ml-32">Sign Up </div>
+      <div className="min-h-screen bg-hero-pattern bg-no-repeat bg-cover md:flex md:justify-start">
+        <div className="">
+          <img
+            className="h-48 w-48 ml-20 md:h-72 md:w-72 lg:w-96 lg:h-96"
+            src={logoSignIn}
+            alt="logo-codeskills"
+          />
+        </div>
+        <div className="md:ml-52 max-w-md w-full mt-4 p-6 ">
+          <div className="font-semibold md:text-4xl text-3xl mb-4 md:ml-32">
+            Sign Up{" "}
+          </div>
           <form onSubmit={this.handleSubmit} action="" className="space-y-6">
             <div>
               <label
@@ -140,6 +150,9 @@ class SignUp extends React.Component {
             >
               Submit
             </button>
+            <div className="ml-4 font-medium text-sm text-blue-500">
+              <Link to="/">Do you have an account? Sign in here</Link>
+            </div>
           </form>
           <br></br>
           {this.state.error === true && (
@@ -147,9 +160,6 @@ class SignUp extends React.Component {
               {this.state.errorMessage}
             </div>
           )}
-        </div>
-        <div className="">
-          <img className="mr-24" src={logoSignIn} alt="logo-codeskills" />
         </div>
       </div>
     );
