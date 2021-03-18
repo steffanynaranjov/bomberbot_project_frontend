@@ -28,7 +28,7 @@ const About = () => {
           className="mx-auto md:w-1/2 md:h-96"
           width="230"
           height="114"
-          src="https://www.youtube.com/embed/7LnMswlAfwg"
+          src="https://www.youtube.com/embed/wTsMglxv9DA"
           frameborder="0"
           title="bomberbot"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
