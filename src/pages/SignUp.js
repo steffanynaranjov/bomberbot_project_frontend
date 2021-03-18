@@ -14,7 +14,7 @@ class SignUp extends React.Component {
       email: "",
     },
     error: false,
-    errorMessage: "",
+    errorMessage: "We found a mistake in your information, please try again",
   };
 
   handleSubmit = (e) => {

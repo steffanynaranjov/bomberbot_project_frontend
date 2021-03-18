@@ -10,7 +10,7 @@ class ForgotPass extends React.Component {
       email: "",
     },
     error: false,
-    errorMessage: "",
+    errorMessage: "This email is alreay used",
   };
 
   handleSubmit = (e) => {
@@ -46,7 +46,7 @@ class ForgotPass extends React.Component {
         console.log(error);
         this.setState({
           error: true,
-          errorMessage: "El email no ha sido registrado anteriormente",
+          errorMessage: "This email is alreay used",
         });
       });
   };

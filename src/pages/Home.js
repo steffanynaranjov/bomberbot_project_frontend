@@ -47,7 +47,7 @@ class Home extends React.Component {
         console.log(error);
         this.setState({
           error: true,
-          errorMessage: "Usuario o contraseña incorrectos",
+          errorMessage: "Invalid username or password",
         });
       });
   };
