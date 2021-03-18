@@ -6,6 +6,7 @@ import Layout from "../Layout";
 import TextEditor from "../pages/TextEditor";
 import SignUp from "../pages/SignUp";
 import Templates from "../pages/Templates";
+import ForgotPass from "../pages/ForgotPass";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
           <Route exact path="/TextEditor" component={TextEditor} />
           <Route exact path="/Templates" component={Templates} />
           <Route exact path="/SignUp" component={SignUp} />
+          <Route exact path="/ForgotPass" component={ForgotPass} />
         </Switch>
       </Layout>
     </BrowserRouter>
