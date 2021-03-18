@@ -17,11 +17,11 @@ export default function Editor(props) {
 
   return (
     <div className="">
-      <div className="">{displayName}</div>
+      <div className="bg-green-200">{displayName}</div>
       <ControlledEditor
         onBeforeChange={handleChange}
         value={value}
-        className="code-mirror-wrapper"
+        className=""
         options={{
           lineWrapping: true,
           lint: true,

@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <div
-      className={`mt-2  justify-between flex-row items-center ${
+      className={`mt-2  md:justify-between md:flex-row md:items-center ${
         location.pathname === "/" ||
         location.pathname === "/SignUp" ||
         location.pathname === "/ForgotPass"
@@ -19,20 +19,28 @@ function Navbar() {
           : "flex"
       }`}
     >
-      <img className="ml-8" src={logo} alt="logo-codeskills" />
+      <img
+        className="md:ml-8 hidden md:flex"
+        src={logo}
+        alt="logo-codeskills"
+      />
 
-      <div className="hover:text-bom-orange">
+      <div className="hover:text-bom-orange ml-2">
         <Link to="/About">Home</Link>
       </div>
-      <div className="hover:text-bom-orange">
-        <Link to="/TextEditor">Text-Editor</Link>
+      <div className="hover:text-bom-orange px-2">
+        <Link to="/TextEditor">Editor</Link>
       </div>
-      <div className="hover:text-bom-orange">
-        <Link to="/Templates">Templates</Link>
+      <div className="hover:text-bom-orange px-2">
+        <Link to="/Templates">Learning</Link>
       </div>
-      <button className="rounded-lg shadow-md mr-20 px-4 py-2 bg-bom-orange hover:bg-opacity-75">
-        Log Out
-      </button>
+      <div className="">
+        <Link to="/">
+          <button className="rounded-lg shadow-md mr-20 px-4 py-2 bg-bom-orange hover:bg-opacity-75">
+            Log Out
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
